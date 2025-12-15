@@ -1,9 +1,9 @@
 
-# Credit Risk Scoring Pipeline
+# Automated Credit Risk Scoring Pipeline
 
-This project simulates a real-world automated credit risk scoring system designed for financial services. The pipeline ingests applicant data, transforms it, applies a machine learning model (logistic regression), and outputs both individual risk scores and a cumulative scoring history. The results are visualised through interactive Power BI dashboards.
 
----
+This project simulates a real-world automated credit risk scoring system for financial services. It ingests applicant data, applies standardised transformations, scores applicants using a logistic regression model, and maintains a cumulative scoring history to support both operational monitoring and long-term risk analysis. Results are visualised through interactive Power BI dashboards.
+
 
 ## Project Overview
 
@@ -67,7 +67,19 @@ scripts/
   * `predicted_default` (0 or 1)
   * `default_probability` (probability of default)
 
----
+## Model and Risk Rationale
+
+A logistic regression model was selected due to its:
+- Interpretability and transparency
+- Alignment with regulatory expectations in credit risk modelling
+- Ability to produce stable probability-based risk scores
+
+### Model Performance
+- **ROC-AUC:** 91.54%
+- **Accuracy:** 89.87%
+
+The model outputs a probability of default-style risk score, which can be thresholded or monitored over time depending on business risk appetite.
+
 
 ## Simulation and Automation
 
